@@ -152,7 +152,7 @@ func (hw *ResponseWriter) SetHeader(name, value string) {
 	hw.w.Header().Set(name, value)
 }
 
-// Writes data the output stream.
+// Write writes data the output stream.
 func (hw *ResponseWriter) Write(data []byte) (int, error) {
 	hw.Size += len(data)
 	return hw.w.Write(data)
